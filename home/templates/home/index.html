@@ -1,0 +1,200 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Três Virginias</title>
+
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <h2>
+                <img src="https://i.ibb.co/Jw19FhNC/Imagem1.png" alt="Logo Três Virgínias" class="logo">
+                Três Virgínias
+            </h2>
+
+            <div class="menu">
+                <a href="#">Início</a>
+                <a href="#bolos">Produtos</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div>
+                <h1>Tradição familiar, sabor e amor</h1>
+
+                <p>
+                    Bolos para deixar seus momentos ainda mais especiais.
+                </p>
+
+                <a href="#bolos" class="botao">
+                    Ver nossos produtos
+                </a>
+            </div>
+
+        </section>
+
+
+        <section id="bolos" class="bolos">
+
+            <h2>Nossos Produtos</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="imagem">
+                     <img src="https://i.ibb.co/FbXtXvmy/Whats-App-Image-2026-09-16-at-18-50-33.jpg" alt="Bolo de noiva">
+                    </div>
+
+                    <h3>Bolo de Noiva</h3>
+
+                    <p>
+                        Delicioso bolo de ameixa sem uso de frutas cristalizadas.
+                    </p>
+
+                    <button onclick="mostrarPrecos('precos-chocolate')">
+    Ver preços
+</button>
+
+<div id="precos-chocolate" class="precos">
+
+    <h4>Preços</h4>
+
+    <p>1KG — R$ 85,00</p>
+    <p>1,5KG - R$ 127,50</p>
+    <p>2KG - R$ 190,00</p>
+
+    <button onclick="fecharPrecos('precos-chocolate')">
+        Fechar
+    </button>
+
+</div>
+                </div>
+
+
+                <div class="card">
+                    <div class="imagem"><img src="https://i.ibb.co/63kvgcz/image.png" alt="Lolita"></div>
+
+                    <h3>Lolita</h3>
+
+                    <p>
+                        Delicioso biscoito recheado com goiabada
+                    </p>
+
+                    <button onclick="mostrarPrecos('precos-morango')">
+    Ver preços
+</button>
+
+<div id="precos-morango" class="precos">
+    <h4>Preços</h4>
+
+    <p>0,5 KG — R$ 45,00</p>
+    <p>1 KG — R$ 85,00</p>
+
+    <button onclick="fecharPrecos('precos-morango')">
+        Fechar
+    </button>
+</div>
+                </div>
+
+
+                <div class="card">
+                    <div class="imagem">
+                        <img src="https://i.ibb.co/4yzr3XY/image.png" alt="Salgadinho de queijo">
+                    </div>
+
+                    <h3>Salgadinho de Queijo</h3>
+
+                    <p>
+                        O petisco de queijo perfeito para qualquer hora.
+                    </p>
+
+                    <button onclick="mostrarPrecos('precos-personalizado')">
+    Ver preços
+</button>
+
+<div id="precos-personalizado" class="precos">
+    <h4>Preços</h4>
+
+    <p>0,5 KG — R$ 45,00</p>
+    <p>1 KG — R$ 85,00</p>
+    
+
+    <button onclick="fecharPrecos('precos-personalizado')">
+        Fechar
+    </button>
+</div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="contato" class="contato">
+
+            <h2>Faça seu pedido</h2>
+
+            <p>Gostou de algo? Entre em contato conosco!</p>
+
+            <a href="https://wa.me/5581999991484?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido.%20Vi%20os%20produtos%20no%20site%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es."
+                class="botao-pedido"
+                target="_blank">
+                Fazer meu pedido
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <h3>Três Virgínias</h3>
+
+        <p>Tradição familiar, sabor e amor em forma de bolo.</p>
+
+        <div class="redes">
+            <a href="https://www.instagram.com/tresvirginias/" target="_blank">Instagram</a>
+            <a href="https://wa.me/5581999991484" target="_blank">WhatsApp</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 Três Virgínias - Todos os direitos reservados.
+        </p>
+
+    </footer>
+    <script>
+
+        function mostrarPrecos(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        function fecharPrecos(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>
